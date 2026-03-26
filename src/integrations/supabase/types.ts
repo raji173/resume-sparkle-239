@@ -14,7 +14,105 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          full_name: string | null
+          id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      resume_analyses: {
+        Row: {
+          ats_score: number | null
+          created_at: string
+          education: string[] | null
+          experience_years: number | null
+          file_name: string
+          file_url: string | null
+          id: string
+          industry_suggestions: string[] | null
+          job_description: string | null
+          job_title: string | null
+          keyword_match_percentage: number | null
+          matched_keywords: string[] | null
+          missing_skills: string[] | null
+          resume_summary: string | null
+          resume_text: string | null
+          skills_found: string[] | null
+          status: string
+          suggestions: string[] | null
+          updated_at: string
+          user_id: string
+          weak_sections: string[] | null
+        }
+        Insert: {
+          ats_score?: number | null
+          created_at?: string
+          education?: string[] | null
+          experience_years?: number | null
+          file_name: string
+          file_url?: string | null
+          id?: string
+          industry_suggestions?: string[] | null
+          job_description?: string | null
+          job_title?: string | null
+          keyword_match_percentage?: number | null
+          matched_keywords?: string[] | null
+          missing_skills?: string[] | null
+          resume_summary?: string | null
+          resume_text?: string | null
+          skills_found?: string[] | null
+          status?: string
+          suggestions?: string[] | null
+          updated_at?: string
+          user_id: string
+          weak_sections?: string[] | null
+        }
+        Update: {
+          ats_score?: number | null
+          created_at?: string
+          education?: string[] | null
+          experience_years?: number | null
+          file_name?: string
+          file_url?: string | null
+          id?: string
+          industry_suggestions?: string[] | null
+          job_description?: string | null
+          job_title?: string | null
+          keyword_match_percentage?: number | null
+          matched_keywords?: string[] | null
+          missing_skills?: string[] | null
+          resume_summary?: string | null
+          resume_text?: string | null
+          skills_found?: string[] | null
+          status?: string
+          suggestions?: string[] | null
+          updated_at?: string
+          user_id?: string
+          weak_sections?: string[] | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
